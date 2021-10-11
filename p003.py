@@ -17,7 +17,7 @@ def smallest_prime(n): # return the smallest prime of n or n itself
     while i*i <= n: # equivalent to i <= sqrt(n)
         
         if n%i == 0:
-            return i
+            return i # we return the first prime number we encounter
         
         i+=1
         
