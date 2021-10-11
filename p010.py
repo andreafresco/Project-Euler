@@ -1,8 +1,8 @@
 # 
-# Solution to Project Euler problem 7
+# Solution to Project Euler problem 10
 # Copyright (c) Andrea Fresco. All rights reserved.
 # 
-# https://projecteuler.net/problem=7
+# https://projecteuler.net/problem=10
 # https://github.com/andreafresco/Project-Euler
 #
 
@@ -19,20 +19,22 @@ def Is_prime(n): # check if the number n is prime
         i+=1
         
     return True # if no divisors were found then it's a prime number
- 
-def IDXthPrime(idx):
+
+
+def summation_of_primes(N_max):
     
-    i = 2
-    primeCounts = 0
+    somma = 0 # init the sum to 0
     
-    while primeCounts < idx:
-        if Is_prime(i):    
-            primeCounts+=1
-        i += 1
+    for i in range(2, N_max):
+        
+        if Is_prime(i):
+            somma += i
     
-    return i-1
+    return somma
+    
 
 if __name__ == "__main__":
     
-    print(IDXthPrime(10001))
+    print(summation_of_primes(2*10**6))
+    # it gives the right result but it takes 10s - TO BE IMPROVED!
     
