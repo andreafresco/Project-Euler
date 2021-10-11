@@ -32,7 +32,7 @@ def Largest_Prime_Factor(P):
         
         # Dividing the number by all it's smallest prime numbers until we reach
         # the highest prime number (condition: P = smallest)
-        P //= smallest
+        P //= smallest # integer division to avoid floating point results (e.g. 17.0 instead of 17)
         smallest = smallest_prime(P)
         
     return P
